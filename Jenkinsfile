@@ -6,7 +6,7 @@ node {
      stage('Build docker Image'){
       app = docker.build("devopslakwal/deepak")
     }
-     stage('Testing Image'){
+     stage('LAKWAL Image'){
        app.inside {
          sh 'echo "TEST PASSED"' 
       }  
