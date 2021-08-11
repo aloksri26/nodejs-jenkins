@@ -4,7 +4,7 @@ node {
       checkout scm  
     }
      stage('Build docker Image'){
-      app = docker.build("devopslakwal/deepak")
+      app = docker.build("aloksri26d/myrepo")
     }
      stage('LAKWALNEW Image'){
        app.inside {
@@ -13,7 +13,7 @@ node {
     }
      
      stage('Push Image'){
-       docker.withRegistry('https://registry.hub.docker.com', 'device_id') {            
+       docker.withRegistry('https://registry.hub.docker.com', 'aloksri26d') {            
        app.push("${env.BUILD_NUMBER}")            
        app.push("latest")   
    }
