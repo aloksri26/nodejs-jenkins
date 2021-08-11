@@ -6,7 +6,7 @@ node {
      stage('Build docker Image'){
       app = docker.build("aloksri26d/myrepo")
     }
-     stage('LAKWALNEW Image'){
+     stage('AlokNEW Image'){
        app.inside {
          sh 'echo "TEST PASSED"' 
       }  
